@@ -1,5 +1,6 @@
 package Entities.Espaconaves;
 
+import javafx.scene.control.TextField;
 import java.util.ArrayList;
 import Entities.EspacoPorto.EspacoPorto;
 import Entities.Transporte.Transporte;
@@ -21,6 +22,10 @@ public class Espaconave {
         this.portoAtual = espacoPortoAtual;
         this.velocidade = velocidade;
     }
+
+    public Espaconave(TextField nomeEspaconave, TextField nomeEspacoporto, TextField velocidadeNaveS,
+                TextField combustivelNave) {
+        }
 
     public ArrayList<Transporte> getHistorico() {
         return new ArrayList<Transporte>(historico);

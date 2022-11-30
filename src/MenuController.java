@@ -5,10 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import Entities.EspacoPorto.EspacoPorto;
+import Entities.Espaconaves.Espaconave;
+import Entities.Espaconaves.EspaconaveFTL;
+import Entities.Espaconaves.EspaconaveSubluz;
 import Repositories.EspacoPortosRepository;
 
 public class MenuController {
 
+    EspacoPortosService eps;
+    EspaconavesService espaconaves;
 
     @FXML
     private Button volta;
@@ -100,6 +105,30 @@ public class MenuController {
     @FXML
     private Button carregaBotao;
 
+    @FXML
+    private TextField combustivelNave;
+
+    @FXML
+    private TextField nomeEspaconave;
+
+    @FXML
+    private TextField nomeEspacoporto;
+
+    @FXML
+    private TextField velocidadeNaveS;
+
+    @FXML
+    private TextField capacidadeNave;
+
+    @FXML
+    private TextField espacoPortoFTL;
+
+    @FXML
+    private TextField nomeFTL;
+
+    @FXML
+    private TextField velocidadeNaveF;
+
 
     @FXML
     void alteraEstado(ActionEvent event) {
@@ -149,17 +178,19 @@ public class MenuController {
     @FXML
     void cadastraPortoMetodo(ActionEvent event) {
         EspacoPorto espacoPorto = new EspacoPorto(numeroEP, nomeEP, coordXEP, coordYEP, coordZEP);
-       // EspacoPortosService.cadastrar(espacoPorto);
-
+        eps.cadastrar(espacoPorto);
     }
 
     @FXML
     void cadastraSubluz(ActionEvent event) {
+        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave, nomeEspacoporto, velocidadeNaveS, combustivelNave);
+        espaconaves.cadastrar(espaconave);
 
     }
 
     @FXML
     void cadastraFTL(ActionEvent event) {
+        Espaconave espaconave = new EspaconaveFTL(nomeFTL, espacoPortoFTL, velocidadeNaveF, capacidadeNave);
 
     }
 

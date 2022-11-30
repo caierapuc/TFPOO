@@ -1,6 +1,7 @@
 package Controllers;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public abstract class BaseController<T, E> {
@@ -9,8 +10,21 @@ public abstract class BaseController<T, E> {
     public BaseController(T repository) {
         this.repository = repository;
     }
-
-    public abstract boolean loadInitialData(String path);
+    
+    public boolean loadData(String path, boolean initial) {
+        try {
+            File file = new File(path);
+            
+            if (!file.exists())
+            throw new FileNotFoundException("Arquivo não encontrado!");
+            
+            return readFile(file, initial);
+        }
+        catch(Exception ex) {
+            System.err.println(ex.getMessage());
+            return false;
+        }
+    }
 
     public T getRepository(){
         return repository;
@@ -35,6 +49,8 @@ public abstract class BaseController<T, E> {
     }
 
     public abstract void writeFile(File file) throws IOException;
+
+    public abstract boolean readFile(File file, boolean initial) throws IOException;
 
     public abstract String getDescricao(E obj);
 }

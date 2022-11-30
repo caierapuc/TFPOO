@@ -8,7 +8,7 @@ import Entities.Transporte.Transporte;
 public class TransportesRepository extends BaseRepository<Transporte, Integer>{
     @Override
     public Transporte get(Integer identificador){
-        List<Transporte> temp = this.getList()
+        List<Transporte> temp = this.getEntities()
             .stream()
             .filter(x -> x.getIdentificador() == identificador)
             .collect(Collectors.toList());

@@ -2,14 +2,17 @@ package Entities.Transporte;
 
 import Entities.EspacoPorto.EspacoPorto;
 import Enums.StatusTransporte;
+import Enums.TipoTransporte;
 
 public abstract class Transporte {
+    private TipoTransporte tipo;
     private int identificador;
     private EspacoPorto origem;
     private EspacoPorto destino;
     private StatusTransporte estado = StatusTransporte.PENDENTE;
 
-    public Transporte(int identificador, EspacoPorto origem, EspacoPorto destino) {
+    public Transporte(TipoTransporte tipo, int identificador, EspacoPorto origem, EspacoPorto destino) {
+        this.tipo = tipo;
         this.identificador = identificador;
         this.origem = origem;
         this.destino = destino;
@@ -18,6 +21,10 @@ public abstract class Transporte {
     public abstract double calculaDistancia();
 
     public abstract double calculaCusto();
+
+    public TipoTransporte getTipo(){
+        return this.tipo;
+    }
 
     public EspacoPorto getOrigem() {
         return origem;

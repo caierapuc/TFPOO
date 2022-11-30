@@ -1,12 +1,13 @@
 package Entities.Transporte;
 
 import Entities.EspacoPorto.EspacoPorto;
+import Enums.TipoTransporte;
 
 public class TransportePessoas extends Transporte {
     private int quantidadePessoas;
 
-    public TransportePessoas(int identificador, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
-        super(identificador, origem, destino);
+    public TransportePessoas(TipoTransporte tipo, int identificador, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
+        super(tipo, identificador, origem, destino);
         this.quantidadePessoas = quantidadePessoas;
     }
     

@@ -2,11 +2,14 @@ package Controllers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import Entities.Espaconaves.Espaconave;
 import Entities.Espaconaves.EspaconaveFTL;
 import Entities.Espaconaves.EspaconaveSubluz;
 import Enums.Combustiveis;
+import Enums.TipoEspaconave;
 import Repositories.EspaconavesRepository;
 import Repositories.EspacoPortosRepository;
 
@@ -32,9 +35,9 @@ public class EspaconavesController extends BaseController<EspaconavesRepository,
                     String[] temp = fr.nextLine().split(";");
                     if (count != 0){
                         if (temp[0].equals("2"))
-                            getRepository().add(new EspaconaveFTL(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
+                            getRepository().add(new EspaconaveFTL(TipoEspaconave.FTL ,temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
                         else
-                            getRepository().add(new EspaconaveSubluz(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), temp[4] == "ion" ? Combustiveis.ION : Combustiveis.NUCLEAR));
+                            getRepository().add(new EspaconaveSubluz(TipoEspaconave.SUBLUZ ,temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), temp[4] == "ion" ? Combustiveis.ION : Combustiveis.NUCLEAR));
                     }
                     else
                         count++;
@@ -52,9 +55,31 @@ public class EspaconavesController extends BaseController<EspaconavesRepository,
 
     @Override
     public boolean cadastrar(Espaconave obj) {
-        if (getRepository().getList().stream().anyMatch(x -> x.getNome().equals(obj.getNome())))
+        if (getRepository().getEntities().stream().anyMatch(x -> x.getNome().equals(obj.getNome())))
             return false;
         return getRepository().add(obj);
+    }
+
+    @Override
+    public void writeFile(File file) throws IOException {
+		try (FileWriter fw = new FileWriter(file)) {
+
+            fw.append("numero,nome,x,y,z\n");
+
+			for (Espaconave obj: this.getRepository().getEntities()) {
+                fw.append(getDescricao(obj));
+			}
+			fw.close();
+		}
+    }
+
+    @Override
+    public String getDescricao(Espaconave obj) {
+        var base = obj.getNome() + "," + obj.getPortoAtual() + "," + obj.getValocidade() + ",";
+        
+        if (obj instanceof EspaconaveSubluz)
+            return "1," + base + ((EspaconaveSubluz) obj).getCombustivel() + "\n";
+        return "2," + base + ((EspaconaveFTL) obj).getCapacidadePC() + "\n";
     }
 
 }

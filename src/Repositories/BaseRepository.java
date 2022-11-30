@@ -9,7 +9,7 @@ public abstract class BaseRepository<T, E> {
         return list.add(obj);
     }
 
-    public ArrayList<T> getList(){
+    public ArrayList<T> getEntities(){
         return new ArrayList<T>(this.list);
     }
 

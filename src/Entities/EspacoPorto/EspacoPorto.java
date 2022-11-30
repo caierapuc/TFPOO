@@ -20,7 +20,7 @@ public class EspacoPorto {
         return numero;
     }
 
-    public String nome() {
+    public String getNome() {
         return nome;
     }
 

@@ -1,11 +1,10 @@
 package Entities;
+
 public class TransportePessoas extends Transporte {
-
     private int quantidadePessoas;
-    private EspacoPorto espacoPorto;
 
-    public TransportePessoas(int identificador, String estado, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
-        super(identificador, estado, origem, destino);
+    public TransportePessoas(int identificador, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
+        super(identificador, origem, destino);
         this.quantidadePessoas = quantidadePessoas;
     }
     
@@ -23,9 +22,5 @@ public class TransportePessoas extends Transporte {
     
     public int getQuantidadePessoas() {
         return quantidadePessoas;
-    }
-
-    public EspacoPorto getEspacoPorto() {
-        return espacoPorto;
     }
 }

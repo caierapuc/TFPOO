@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import Entities.*;
+import Enums.Combustiveis;
 import Repositories.EspaconavesRepository;
 import Repositories.EspacoPortosRepository;
 
@@ -29,10 +30,10 @@ public class EspaconavesController {
                 while (fr.hasNextLine()){
                     String[] temp = fr.nextLine().split(";");
                     if (count != 0){
-                        if (Double.parseDouble(temp[3]) > 0.5)
-                            espaconavesRepository.add(new EspaconaveFTL(temp[0], espacoPortosRepository.get(Integer.parseInt(temp[1])), Double.parseDouble(temp[2]), Double.parseDouble(temp[3])));
+                        if (temp[0].equals("2"))
+                            espaconavesRepository.add(new EspaconaveFTL(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
                         else
-                            espaconavesRepository.add(new EspaconaveSubluz(temp[0], espacoPortosRepository.get(Integer.parseInt(temp[1])), Double.parseDouble(temp[2]), temp[3]));
+                            espaconavesRepository.add(new EspaconaveSubluz(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), temp[4] == "ion" ? Combustiveis.ION : Combustiveis.NUCLEAR));
                     }
                     else
                         count++;

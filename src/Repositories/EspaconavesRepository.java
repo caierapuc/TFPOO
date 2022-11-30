@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import Entities.Espaconave;
 
-public class EspaconavesRepository extends Repository<Espaconave> {
+public class EspaconavesRepository extends BaseRepository<Espaconave> {
     
     public Espaconave get(String nome) {
         List<Espaconave> temp = this.getList()

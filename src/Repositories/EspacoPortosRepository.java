@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import Entities.EspacoPorto;
 
-public class EspacoPortosRepository extends Repository<EspacoPorto> {
+public class EspacoPortosRepository extends BaseRepository<EspacoPorto> {
     
     public EspacoPorto get(int numero) {
         List<EspacoPorto> temp = this.getList()

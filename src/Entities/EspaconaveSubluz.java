@@ -1,21 +1,16 @@
 package Entities;
+
+import Enums.Combustiveis;
+
 public class EspaconaveSubluz extends Espaconave {
+    private Combustiveis combustivel;
+    
+        public EspaconaveSubluz(String nome, EspacoPorto espacoPortoAtual, double velocidade, Combustiveis combustivel) {
+            super(nome, espacoPortoAtual, velocidade);
+            this.combustivel = combustivel;
+        }
 
-    private double velocidadeMaxima;
-    private String combustivel;
-
-    public double getVelocidadeMaxima() {
-        return velocidadeMaxima;
-    }
-
-    public String getCombustivel() {
+    public Combustiveis getCombustivel() {
         return combustivel;
     }
-
-    public EspaconaveSubluz(String nome, EspacoPorto espacoPortoAtual, double velocidadeMaxima, String combustivel) {
-        super(nome, espacoPortoAtual);
-        this.velocidadeMaxima = velocidadeMaxima;
-        this.combustivel = combustivel;
-    }
-    
 }

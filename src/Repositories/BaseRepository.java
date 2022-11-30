@@ -2,7 +2,7 @@ package Repositories;
 
 import java.util.ArrayList;
 
-public abstract class Repository<T> {
+public abstract class BaseRepository<T> {
     private ArrayList<T> list = new ArrayList<>();
     
     public boolean add(T obj){

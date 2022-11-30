@@ -1,14 +1,15 @@
 package Entities;
-public abstract class Transporte {
 
+import Enums.StatusTransporte;
+
+public abstract class Transporte {
     private int identificador;
     private EspacoPorto origem;
     private EspacoPorto destino;
-    private String estado = "Pendente";
+    private StatusTransporte estado = StatusTransporte.PENDENTE;
 
-    public Transporte(int identificador, String estado, EspacoPorto origem, EspacoPorto destino) {
+    public Transporte(int identificador, EspacoPorto origem, EspacoPorto destino) {
         this.identificador = identificador;
-        this.estado = estado;
         this.origem = origem;
         this.destino = destino;
     }
@@ -29,8 +30,11 @@ public abstract class Transporte {
         return identificador;
     }
 
-    public String getEstado() {
+    public StatusTransporte getEstado() {
         return estado;
     }
 
+    public void setEstado(StatusTransporte estado) {
+        this.estado = estado;
+    }
 }

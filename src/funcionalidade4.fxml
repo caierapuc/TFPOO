@@ -3,10 +3,15 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -19,9 +24,19 @@
       </ImageView>
       <Pane layoutX="92.0" layoutY="488.0" prefHeight="18.0" prefWidth="268.0" style="-fx-background-color: #000000;" />
       <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
-      <Pane layoutX="14.0" layoutY="470.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #000000;" />
+      <Pane layoutX="2.0" layoutY="2.0" prefHeight="613.0" prefWidth="490.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button fx:id="consultaTransporte" layoutX="222.0" layoutY="29.0" mnemonicParsing="false" onAction="#consultaTransporte" prefHeight="44.0" prefWidth="442.0" style="-fx-background-color: #000000;" text="Consultar Todos os Transportes" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Button>
+            <Line endX="876.0" layoutX="62.0" layoutY="83.0" startX="-223.5999755859375" stroke="WHITE" />
+         </children></Pane>
       <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
-      <Line endX="132.39996337890625" layoutX="711.0" layoutY="266.0" startX="-100.0" stroke="WHITE" />
       <Label layoutX="120.0" layoutY="580.0" text="Feito por: Caio Fernandes e Paola Lopes" textFill="WHITE">
          <font>
             <Font name="SimSun" size="12.0" />
@@ -32,13 +47,31 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="consultaTransporte" layoutX="522.0" layoutY="285.0" mnemonicParsing="false" onAction="#consultaTransporte" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Consultar Todos os Transportes" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Consolas" size="18.0" />
-         </font>
-      </Button>
+      <GridPane layoutX="6.0" layoutY="89.0" prefHeight="510.0" prefWidth="926.0" style="-fx-background-color: #FFFF;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="449.99999084472654" minHeight="10.0" prefHeight="433.99999084472654" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView prefHeight="450.0" prefWidth="557.0">
+              <columns>
+                <TableColumn prefWidth="43.20001220703125" text="TIPO" />
+                <TableColumn prefWidth="105.60000610351562" text="IDENTIFICADOR" />
+                  <TableColumn prefWidth="63.199981689453125" text="ORIGEM" />
+                  <TableColumn prefWidth="58.399993896484375" text="DESTINO" />
+                  <TableColumn text="ESTADO" />
+                  <TableColumn prefWidth="74.4000244140625" text="MATERIAL" />
+                  <TableColumn prefWidth="72.00006103515625" text="CARGA" />
+                  <TableColumn prefWidth="103.20013427734375" text="QTDE PESSOAS" />
+                  <TableColumn prefWidth="103.20013427734375" text="ESPAÇONAVE" />
+                  <TableColumn prefWidth="45.60003662109375" text="TIPO" />
+                  <TableColumn prefWidth="88.7999267578125" text="NOME" />
+                  <TableColumn prefWidth="83.2000732421875" text="VELOCIDADE" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>

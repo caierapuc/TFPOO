@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -21,7 +22,6 @@
       <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
       <Pane layoutX="14.0" layoutY="470.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #000000;" />
       <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
-      <Line endX="132.39996337890625" layoutX="713.0" layoutY="228.0" startX="-100.0" stroke="WHITE" />
       <Label layoutX="120.0" layoutY="580.0" text="Feito por: Caio Fernandes e Paola Lopes" textFill="WHITE">
          <font>
             <Font name="SimSun" size="12.0" />
@@ -32,13 +32,21 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="cadastroTransporte" layoutX="533.0" layoutY="168.0" mnemonicParsing="false" onAction="#cadastraTransporte" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Novo Transporte" textFill="WHITE">
+      <Button fx:id="cadastroPorto" layoutX="522.0" layoutY="53.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Novo Transporte" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
-            <Font name="Consolas" size="18.0" />
+            <Font name="Consolas" size="24.0" />
          </font>
       </Button>
+      <Line endX="217.60003662109375" layoutX="711.0" layoutY="105.0" startX="-223.5999755859375" stroke="WHITE" />
+      <Label layoutX="575.0" layoutY="225.0" prefHeight="54.0" prefWidth="403.0" text="Tipo do Transporte (1 ou 2):" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tipoT" layoutX="691.0" layoutY="279.0" prefHeight="26.0" prefWidth="58.0" />
+      <Button fx:id="oka2" layoutX="636.0" layoutY="325.0" mnemonicParsing="false" onAction="#ok2" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Ok" />
    </children>
 </AnchorPane>

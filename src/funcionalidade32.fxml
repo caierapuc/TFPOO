@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="940.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
+   <children>
+      <ImageView fitHeight="594.0" fitWidth="940.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Views/Img/ACMESPACE.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="92.0" layoutY="488.0" prefHeight="18.0" prefWidth="268.0" style="-fx-background-color: #000000;" />
+      <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
+      <Pane layoutX="14.0" layoutY="470.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #000000;" />
+      <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
+      <Label layoutX="120.0" layoutY="580.0" text="Feito por: Caio Fernandes e Paola Lopes" textFill="WHITE">
+         <font>
+            <Font name="SimSun" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="volta" layoutX="906.0" layoutY="7.0" mnemonicParsing="false" onAction="#voltar" opacity="0.13" prefHeight="26.0" prefWidth="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Line endX="196.00006103515625" endY="0.1999969482421875" layoutX="728.0" layoutY="96.0" startX="-223.5999755859375" stroke="WHITE" />
+      <Button fx:id="cadastro" layoutX="656.0" layoutY="550.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Label layoutX="645.0" layoutY="299.0" prefHeight="54.0" prefWidth="194.0" text="Destino:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="154.0" prefHeight="54.0" prefWidth="222.0" text="Identificador:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="223.0" prefHeight="54.0" prefWidth="194.0" text="Origem:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeEP" layoutX="504.0" layoutY="196.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordXEP" layoutX="501.0" layoutY="340.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordYEP" layoutX="501.0" layoutY="264.0" prefHeight="26.0" prefWidth="413.0" />
+      <Label layoutX="601.0" layoutY="377.0" prefHeight="54.0" prefWidth="194.0" text="Quantidade de Carga:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coordYEP1" layoutX="504.0" layoutY="419.0" prefHeight="26.0" prefWidth="413.0" />
+      <Button fx:id="cadastroPorto" layoutX="518.0" layoutY="39.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Novo Transporte" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="cadastroPorto1" layoutX="517.0" layoutY="97.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Carga" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="615.0" layoutY="454.0" prefHeight="54.0" prefWidth="194.0" text="Descrição Material:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coordYEP11" layoutX="505.0" layoutY="498.0" prefHeight="26.0" prefWidth="413.0" />
+   </children>
+</AnchorPane>

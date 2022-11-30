@@ -57,7 +57,13 @@ public class MenuController {
     private Button oka;
 
     @FXML
+    private Button oka2;
+
+    @FXML
     private TextField tipoE;
+
+    @FXML
+    private TextField tipoT;
 
 
     @FXML
@@ -118,6 +124,20 @@ public class MenuController {
         }
         else if(tipoE.getText().toString().equals("2")) {
             App.changeScreen("funcionalidade22");
+        }
+        else {
+            App.changeScreen("layout");
+        }
+    }
+
+    @FXML
+    void ok2(ActionEvent event) {
+
+        if(tipoT.getText().toString().equals("1")) {
+            App.changeScreen("funcionalidade31");
+        }
+        else if(tipoT.getText().toString().equals("2")) {
+            App.changeScreen("funcionalidade32");
         }
         else {
             App.changeScreen("layout");

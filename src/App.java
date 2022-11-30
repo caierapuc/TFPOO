@@ -23,6 +23,8 @@ public class App extends Application {
     private static Scene cena9;
     private static Scene cena21;
     private static Scene cena22;
+    private static Scene cena31;
+    private static Scene cena32;
 
     public static void main(String[] args) {
         launch(args);
@@ -67,6 +69,12 @@ public class App extends Application {
         Parent funcionalidade22 = FXMLLoader.load(getClass().getResource("funcionalidade22.fxml"));
         cena22 = new Scene(funcionalidade22);
 
+        Parent funcionalidade31 = FXMLLoader.load(getClass().getResource("funcionalidade31.fxml"));
+        cena31 = new Scene(funcionalidade31);
+
+        Parent funcionalidade32 = FXMLLoader.load(getClass().getResource("funcionalidade32.fxml"));
+        cena32 = new Scene(funcionalidade32);
+
         primaryStage.setTitle("ACMESpace");
         primaryStage.setScene(root);
         primaryStage.show();
@@ -109,6 +117,12 @@ public class App extends Application {
             break;
             case "funcionalidade22":
             stage.setScene(cena22);
+            break;
+            case "funcionalidade31":
+            stage.setScene(cena31);
+            break;
+            case "funcionalidade32":
+            stage.setScene(cena32);
             break;
         }
     }

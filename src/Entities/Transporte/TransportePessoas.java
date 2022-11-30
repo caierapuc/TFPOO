@@ -6,8 +6,8 @@ import Enums.TipoTransporte;
 public class TransportePessoas extends Transporte {
     private int quantidadePessoas;
 
-    public TransportePessoas(TipoTransporte tipo, int identificador, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
-        super(tipo, identificador, origem, destino);
+    public TransportePessoas(int identificador, EspacoPorto origem, EspacoPorto destino, int quantidadePessoas) {
+        super(TipoTransporte.PESSOAS, identificador, origem, destino);
         this.quantidadePessoas = quantidadePessoas;
     }
     

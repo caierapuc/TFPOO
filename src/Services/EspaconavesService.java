@@ -65,10 +65,10 @@ public class EspaconavesService extends BaseService<EspaconavesRepository, Espac
                 String[] temp = fr.nextLine().split(initial ? ";" : ",");
                 if (count != 0){
                     if (temp[0].equals("2"))
-                        if (!cadastrar(new EspaconaveFTL(TipoEspaconave.FTL ,temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), Double.parseDouble(temp[4]))))
+                        if (!cadastrar(new EspaconaveFTL(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), Double.parseDouble(temp[4]))))
                             return false;
                     else
-                        if (!cadastrar(new EspaconaveSubluz(TipoEspaconave.SUBLUZ ,temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), temp[4] == "ion" ? Combustiveis.ION : Combustiveis.NUCLEAR)))
+                        if (!cadastrar(new EspaconaveSubluz(temp[1], espacoPortosRepository.get(Integer.parseInt(temp[2])), Double.parseDouble(temp[3]), temp[4] == "ion" ? Combustiveis.ION : Combustiveis.NUCLEAR)))
                             return false;
                 }
                 else

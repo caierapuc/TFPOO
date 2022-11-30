@@ -6,8 +6,8 @@ import Enums.TipoEspaconave;
 public class EspaconaveFTL extends Espaconave {
     private double capacidadePC;
 
-    public EspaconaveFTL(TipoEspaconave tipo,String nome, EspacoPorto espacoPortoAtual, double velocidade, double capacidadePC) {
-        super(tipo, nome, espacoPortoAtual, velocidade);
+    public EspaconaveFTL(String nome, EspacoPorto espacoPortoAtual, double velocidade, double capacidadePC) {
+        super(TipoEspaconave.FTL, nome, espacoPortoAtual, velocidade);
         this.capacidadePC = capacidadePC;
     }
 

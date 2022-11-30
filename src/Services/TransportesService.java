@@ -10,7 +10,6 @@ import java.util.Scanner;
 import Entities.Transporte.Transporte;
 import Entities.Transporte.TransporteCarga;
 import Entities.Transporte.TransportePessoas;
-import Enums.TipoTransporte;
 import Repositories.EspacoPortosRepository;
 import Repositories.TransportesRepository;
 
@@ -67,10 +66,10 @@ public class TransportesService extends BaseService<TransportesRepository, Trans
                 String[] temp = fr.nextLine().split(initial ? ";" : ",");
                 if (count != 0) {
                     if (temp[0].equals("1"))
-                        if (!cadastrar(new TransportePessoas(TipoTransporte.PESSOAS, Integer.parseInt(temp[1]), espacoPortosRepository.get(Integer.parseInt(temp[2])), espacoPortosRepository.get(Integer.parseInt(temp[3])), Integer.parseInt(temp[4]))))
+                        if (!cadastrar(new TransportePessoas(Integer.parseInt(temp[1]), espacoPortosRepository.get(Integer.parseInt(temp[2])), espacoPortosRepository.get(Integer.parseInt(temp[3])), Integer.parseInt(temp[4]))))
                             return false;
                     else
-                        if (!cadastrar(new TransporteCarga(TipoTransporte.CARGA ,Integer.parseInt(temp[1]), espacoPortosRepository.get(Integer.parseInt(temp[2])), espacoPortosRepository.get(Integer.parseInt(temp[3])), Double.parseDouble(temp[4]), temp[5])))
+                        if (!cadastrar(new TransporteCarga(Integer.parseInt(temp[1]), espacoPortosRepository.get(Integer.parseInt(temp[2])), espacoPortosRepository.get(Integer.parseInt(temp[3])), Double.parseDouble(temp[4]), temp[5])))
                             return false;
                 }
                 else

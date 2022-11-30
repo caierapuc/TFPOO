@@ -12,6 +12,4 @@ public abstract class Repository<T> {
     public ArrayList<T> getList(){
         return new ArrayList<T>(this.list);
     }
-
-    public abstract T get(Object obj);
 }

@@ -6,12 +6,15 @@ import java.util.Scanner;
 
 import Entities.*;
 import Repositories.EspaconavesRepository;
+import Repositories.EspacoPortosRepository;
 
 public class EspaconavesController {
     private final EspaconavesRepository espaconavesRepository;
+    private final EspacoPortosRepository espacoPortosRepository;
 
-    public EspaconavesController(EspaconavesRepository _espaconavesRepository) {
+    public EspaconavesController(EspaconavesRepository _espaconavesRepository, EspacoPortosRepository _espacoPortosRepository) {
         this.espaconavesRepository = _espaconavesRepository;
+        this.espacoPortosRepository = _espacoPortosRepository;
     }
 
     public boolean loadInitialData(String path) throws Exception {
@@ -26,10 +29,13 @@ public class EspaconavesController {
                 while (fr.hasNextLine()){
                     String[] temp = fr.nextLine().split(";");
                     if (count != 0){
-                        espaconavesRepository.addEspaconave();
+                        if (Double.parseDouble(temp[3]) > 0.5)
+                            espaconavesRepository.add(new EspaconaveFTL(temp[0], espacoPortosRepository.get(Integer.parseInt(temp[1])), Double.parseDouble(temp[2]), Double.parseDouble(temp[3])));
+                        else
+                            espaconavesRepository.add(new EspaconaveSubluz(temp[0], espacoPortosRepository.get(Integer.parseInt(temp[1])), Double.parseDouble(temp[2]), temp[3]));
                     }
                     else
-                    count++;
+                        count++;
                 }
                 fr.close();
             }

@@ -29,7 +29,7 @@ public class EspacoPortosController {
                     if (count != 0)
                         espacoPortosRepository.add(new EspacoPorto(Integer.parseInt(temp[0]), temp[1], Double.parseDouble(temp[2]), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
                     else
-                    count++;
+                        count++;
                 }
                 fr.close();
             }

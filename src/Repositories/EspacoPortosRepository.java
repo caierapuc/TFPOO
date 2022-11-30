@@ -1,16 +1,20 @@
 package Repositories;
 
-import java.security.InvalidParameterException;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import Entities.EspacoPorto;
 
 public class EspacoPortosRepository extends Repository<EspacoPorto> {
-    @Override
-    public EspacoPorto get(Object numero) {
-        if (!(numero instanceof Integer))
-            throw new InvalidParameterException();
+    
+    public EspacoPorto get(int numero) {
+        List<EspacoPorto> temp = this.getList()
+                    .stream()
+                    .filter(x -> x.getNumero() == (Integer)numero)
+                    .collect(Collectors.toList());
 
-        return this.getList().stream().filter(x -> x.getNumero() == (Integer)numero).collect(Collectors.toList()).get(0);
+        if (temp.size() > 0)
+            return temp.get(0);
+        return null;
     }  
 }

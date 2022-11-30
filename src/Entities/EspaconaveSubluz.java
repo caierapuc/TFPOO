@@ -12,8 +12,10 @@ public class EspaconaveSubluz extends Espaconave {
         return combustivel;
     }
 
-    public EspaconaveSubluz(String nome, EspacoPorto espacoPortoAtual) {
+    public EspaconaveSubluz(String nome, EspacoPorto espacoPortoAtual, double velocidadeMaxima, String combustivel) {
         super(nome, espacoPortoAtual);
+        this.velocidadeMaxima = velocidadeMaxima;
+        this.combustivel = combustivel;
     }
     
 }

@@ -3,6 +3,7 @@ package Drivers.EspaconavesTests;
 import Entities.EspacoPorto.*;
 import Entities.Transporte.*;
 import Entities.Espaconaves.*;
+import Enums.*;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;

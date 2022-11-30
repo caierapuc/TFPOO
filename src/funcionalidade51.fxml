@@ -27,16 +27,7 @@
       <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
       <Pane layoutX="2.0" layoutY="2.0" prefHeight="613.0" prefWidth="490.0" style="-fx-background-color: #000000;">
          <children>
-            <Button fx:id="consultaTransporte" layoutX="245.0" layoutY="30.0" mnemonicParsing="false" onAction="#consultaTransporte" prefHeight="44.0" prefWidth="442.0" style="-fx-background-color: #000000;" text="Designar Transportes" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Consolas" size="24.0" />
-               </font>
-            </Button>
             <Line endX="876.0" layoutX="62.0" layoutY="83.0" startX="-223.5999755859375" stroke="WHITE" />
-            <TextField layoutX="211.0" layoutY="491.0" />
          </children>
       </Pane>
       <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
@@ -50,7 +41,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <GridPane layoutX="67.0" layoutY="95.0" prefHeight="333.0" prefWidth="806.0" style="-fx-background-color: #FFFF;">
+      <GridPane layoutX="6.0" layoutY="89.0" prefHeight="510.0" prefWidth="605.0" style="-fx-background-color: #FFFF;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -58,7 +49,7 @@
             <RowConstraints maxHeight="449.99999084472654" minHeight="10.0" prefHeight="433.99999084472654" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TableView prefHeight="450.0" prefWidth="796.0">
+            <TableView prefHeight="450.0" prefWidth="557.0">
                <columns>
                   <TableColumn prefWidth="43.20001220703125" text="TIPO" />
                   <TableColumn prefWidth="105.60000610351562" text="IDENTIFICADOR" />
@@ -68,12 +59,24 @@
                   <TableColumn prefWidth="74.4000244140625" text="MATERIAL" />
                   <TableColumn prefWidth="72.00006103515625" text="CARGA" />
                   <TableColumn prefWidth="103.20013427734375" text="QTDE PESSOAS" />
-                  <TableColumn prefWidth="103.20013427734375" text="ESPAÇONAVE" />
-                  <TableColumn prefWidth="103.20013427734375" text="DISPONÍVEL" />
                </columns>
             </TableView>
          </children>
       </GridPane>
-      <TextField layoutX="493.0" layoutY="494.0" />
+      <Button fx:id="consultaTransporte" layoutX="301.0" layoutY="33.0" mnemonicParsing="false" onAction="#consultaTransporte" prefHeight="44.0" prefWidth="442.0" style="-fx-background-color: #000000;" text="Alterar Estado de Transporte" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="704.0" layoutY="227.0" prefHeight="54.0" prefWidth="403.0" text="Novo Estado:" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tipoT" layoutX="639.0" layoutY="282.0" prefHeight="26.0" prefWidth="295.0" />
+      <Button fx:id="alteraEstadoBotao" layoutX="691.0" layoutY="341.0" mnemonicParsing="false" onAction="#alteraEstadoB" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Alterar" />
    </children>
 </AnchorPane>

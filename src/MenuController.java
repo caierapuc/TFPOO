@@ -1,9 +1,12 @@
+import Services.*;
+import Entities.Transporte.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class MenuController {
+
 
     @FXML
     private Button volta;
@@ -36,6 +39,18 @@ public class MenuController {
     private Button salvaDados;
 
     @FXML
+    private Button cadastroSubluz;
+
+    @FXML
+    private Button cadastroFTL;
+
+    @FXML
+    private Button cadastroTPessoa;
+
+    @FXML
+    private Button cadastroTCarga;
+
+    @FXML
     private Button cadastro;
 
     @FXML
@@ -64,6 +79,21 @@ public class MenuController {
 
     @FXML
     private TextField tipoT;
+
+    @FXML
+    private Button alteraEstadoBotao;
+
+    @FXML
+    private TextField identificaTransporte;
+
+    @FXML
+    private TextField nomeArquivo;
+
+    @FXML
+    private Button salvaBotao;
+
+    @FXML
+    private Button carregaBotao;
 
 
     @FXML
@@ -113,6 +143,25 @@ public class MenuController {
 
     @FXML
     void cadastra(ActionEvent event) {
+    }
+
+    @FXML
+    void cadastraSubluz(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cadastraFTL(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cadastraPessoa(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cadastraCarga(ActionEvent event) {
 
     }
 
@@ -142,6 +191,34 @@ public class MenuController {
         else {
             App.changeScreen("layout");
         }
+    }
+
+    @FXML
+    void alteraEstadoB(ActionEvent event) {
+
+    }
+
+    @FXML
+    void identificarTransporte(ActionEvent event) {
+        
+       
+     // if(identificaTransporte.getText().toString().equals(transporte.getIdentificador()));
+
+    }
+
+    @FXML
+    void carregaArquivo(ActionEvent event) {
+
+    }
+
+    @FXML
+    void salvaDados(ActionEvent event) {
+
+    }
+
+    @FXML
+    void carregarArquivos(ActionEvent event) {
+
     }
 
     @FXML

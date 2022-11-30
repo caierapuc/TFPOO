@@ -33,7 +33,7 @@
          </cursor>
       </Button>
       <Line endX="196.00006103515625" endY="0.1999969482421875" layoutX="728.0" layoutY="96.0" startX="-223.5999755859375" stroke="WHITE" />
-      <Button fx:id="cadastro" layoutX="658.0" layoutY="500.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Button fx:id="cadastroTPessoa" layoutX="658.0" layoutY="500.0" mnemonicParsing="false" onAction="#cadastraPessoa" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
       <Label layoutX="647.0" layoutY="315.0" prefHeight="54.0" prefWidth="194.0" text="Destino:" textFill="WHITE">
          <font>
             <Font size="18.0" />

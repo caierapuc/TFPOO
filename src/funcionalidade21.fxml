@@ -59,7 +59,7 @@
       <TextField fx:id="nomeEP" layoutX="502.0" layoutY="199.0" prefHeight="26.0" prefWidth="413.0" />
       <TextField fx:id="coordXEP" layoutX="502.0" layoutY="377.0" prefHeight="26.0" prefWidth="413.0" />
       <TextField fx:id="coordYEP" layoutX="502.0" layoutY="290.0" prefHeight="26.0" prefWidth="413.0" />
-      <Button fx:id="cadastro" layoutX="672.0" layoutY="514.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Button fx:id="cadastroSubluz" layoutX="672.0" layoutY="514.0" mnemonicParsing="false" onAction="#cadastraSubluz" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
       <Label layoutX="659.0" layoutY="414.0" prefHeight="54.0" prefWidth="194.0" text="Combustível:" textFill="WHITE">
          <font>
             <Font size="18.0" />

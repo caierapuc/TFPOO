@@ -45,7 +45,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="identificaTransporte" layoutX="592.0" layoutY="286.0" onAction="#identificarTransporte" prefHeight="26.0" prefWidth="295.0" />
+      <TextField fx:id="nomeArquivoS" layoutX="592.0" layoutY="286.0" onAction="#salvaArquivo" prefHeight="26.0" prefWidth="295.0" />
       <Button fx:id="salvaBotao" layoutX="644.0" layoutY="345.0" mnemonicParsing="false" onAction="#salvaDados" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Salvar" />
       <Line endX="217.60003662109375" layoutX="722.0" layoutY="115.0" startX="-233.19998168945312" stroke="WHITE" />
    </children>

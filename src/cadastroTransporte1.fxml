@@ -49,15 +49,15 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeEP" layoutX="506.0" layoutY="212.0" prefHeight="26.0" prefWidth="413.0" />
-      <TextField fx:id="coordXEP" layoutX="503.0" layoutY="356.0" prefHeight="26.0" prefWidth="413.0" />
-      <TextField fx:id="coordYEP" layoutX="503.0" layoutY="280.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="identificadorTransporteP" layoutX="506.0" layoutY="212.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="destinoTransporteP" layoutX="503.0" layoutY="356.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="origemTransporteP" layoutX="503.0" layoutY="280.0" prefHeight="26.0" prefWidth="413.0" />
       <Label layoutX="591.0" layoutY="393.0" prefHeight="54.0" prefWidth="194.0" text="Quantidade de Pessoas:" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="coordYEP1" layoutX="506.0" layoutY="435.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="qntdPessoas" layoutX="506.0" layoutY="435.0" prefHeight="26.0" prefWidth="413.0" />
       <Button fx:id="cadastroPorto" layoutX="518.0" layoutY="39.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Novo Transporte" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />

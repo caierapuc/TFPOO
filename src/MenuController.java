@@ -14,6 +14,8 @@ public class MenuController {
 
     EspacoPortosService eps;
     EspaconavesService espaconaves;
+    TransportesService transporte;
+    BaseService baseService;
 
     @FXML
     private Button volta;
@@ -129,6 +131,39 @@ public class MenuController {
     @FXML
     private TextField velocidadeNaveF;
 
+    @FXML
+    private TextField destinoTransporteP;
+
+    @FXML
+    private TextField identificadorTransporteP;
+
+    @FXML
+    private TextField origemTransporteP;
+
+    @FXML
+    private TextField qntdPessoas;
+
+    @FXML
+    private TextField descricaoMaterial;
+
+    @FXML
+    private TextField destinoTransporteC;
+
+    @FXML
+    private TextField identificadorTransporteC;
+
+    @FXML
+    private TextField origemTransporteC;
+
+    @FXML
+    private TextField qntdCarga;
+
+    @FXML
+    private TextField nomeArquivoD;
+
+    @FXML
+    private TextField nomeArquivoS;
+
 
     @FXML
     void alteraEstado(ActionEvent event) {
@@ -185,7 +220,6 @@ public class MenuController {
     void cadastraSubluz(ActionEvent event) {
         Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave, nomeEspacoporto, velocidadeNaveS, combustivelNave);
         espaconaves.cadastrar(espaconave);
-
     }
 
     @FXML
@@ -196,12 +230,14 @@ public class MenuController {
 
     @FXML
     void cadastraPessoa(ActionEvent event) {
-
+        Transporte transporteP = new TransportePessoas(identificadorTransporteP, origemTransporteP, destinoTransporteP, qntdPessoas);
+        transporte.cadastrar(transporteP);
     }
 
     @FXML
     void cadastraCarga(ActionEvent event) {
-
+        Transporte transporteC = new TransporteCarga(identificadorTransporteC, origemTransporteC, destinoTransporteC, qntdCarga , descricaoMaterial);
+        transporte.cadastrar(transporteC);
     }
 
     @FXML
@@ -258,6 +294,17 @@ public class MenuController {
     @FXML
     void carregarArquivos(ActionEvent event) {
 
+    }
+
+    @FXML
+    void salvaArquivo(ActionEvent event) {
+        baseService.saveToFile(nomeArquivoS);
+
+    }
+
+    @FXML
+    void carregaDados(ActionEvent event) {
+        baseService.loadData(nomeArquivoD, false);
     }
 
     @FXML

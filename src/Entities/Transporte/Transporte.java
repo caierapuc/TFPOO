@@ -1,6 +1,7 @@
 package Entities.Transporte;
 
 import Entities.EspacoPorto.EspacoPorto;
+import Entities.Espaconaves.Espaconave;
 import Enums.StatusTransporte;
 import Enums.TipoTransporte;
 
@@ -10,6 +11,8 @@ public abstract class Transporte {
     private EspacoPorto origem;
     private EspacoPorto destino;
     private StatusTransporte estado = StatusTransporte.PENDENTE;
+
+    private Espaconave espaconaveResponsavel = null;
 
     public Transporte(TipoTransporte tipo, int identificador, EspacoPorto origem, EspacoPorto destino) {
         this.tipo = tipo;
@@ -24,6 +27,14 @@ public abstract class Transporte {
 
     public TipoTransporte getTipo(){
         return this.tipo;
+    }
+
+    public Espaconave getEspaconaveResponsavel() {
+        return espaconaveResponsavel;
+    }
+
+    public void setEspaconaveResponsavel(Espaconave espaconaveResponsavel) {
+        this.espaconaveResponsavel = espaconaveResponsavel;
     }
 
     public EspacoPorto getOrigem() {

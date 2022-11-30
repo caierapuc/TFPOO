@@ -3,6 +3,7 @@ package Controllers;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import Entities.Espaconaves.Espaconave;
 import Entities.Espaconaves.EspaconaveFTL;
@@ -24,6 +25,10 @@ public class EspaconavesController extends BaseController<EspaconavesRepository,
     public boolean cadastrar(Espaconave obj) {
         if (getRepository().getEntities().stream().anyMatch(x -> x.getNome().equals(obj.getNome())))
             return false;
+
+        if (obj.getPortoAtual() == null)
+            obj.setPortoAtual(espacoPortosRepository.get(11));
+
         return getRepository().add(obj);
     }
 
@@ -31,7 +36,7 @@ public class EspaconavesController extends BaseController<EspaconavesRepository,
     public void writeFile(File file) throws IOException {
 		try (FileWriter fw = new FileWriter(file)) {
 
-            fw.append("numero,nome,x,y,z\n");
+            fw.append("tipo,nome,espacoporto,velocidade,combustivel_limite\n");
 
 			for (Espaconave obj: this.getRepository().getEntities()) {
                 fw.append(getDescricao(obj));
@@ -69,5 +74,10 @@ public class EspaconavesController extends BaseController<EspaconavesRepository,
             fr.close();
         }
         return true;
+    }
+
+    @Override
+    public ArrayList<Espaconave> getAllEntities() {
+        return this.getRepository().getEntities();
     }
 }

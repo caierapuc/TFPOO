@@ -3,6 +3,7 @@ package Controllers;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -79,5 +80,10 @@ public class TransportesController extends BaseController<TransportesRepository,
         }
 
         return true;
+    }
+
+    @Override
+    public ArrayList<Transporte> getAllEntities() {
+        return this.getRepository().getEntities();
     }
 }

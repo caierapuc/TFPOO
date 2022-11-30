@@ -1,4 +1,3 @@
-package Views;
 import Services.*;
 import Entities.Transporte.*;
 import javafx.event.ActionEvent;
@@ -21,7 +20,7 @@ public class MenuController {
     private Button cadastroNave;
 
     @FXML
-    private Button cadastroPorto;
+    private Button cadastraPorto;
 
     @FXML
     private Button cadastroTransporte;
@@ -54,7 +53,7 @@ public class MenuController {
     private Button cadastroTCarga;
 
     @FXML
-    private Button cadastraPorto;
+    private Button cadastroPorto;
 
     @FXML
     private TextField numeroEP;
@@ -85,6 +84,9 @@ public class MenuController {
 
     @FXML
     private Button alteraEstadoBotao;
+
+    @FXML
+    private Button alteraEstadoB;
 
     @FXML
     private TextField identificaTransporte;
@@ -147,7 +149,7 @@ public class MenuController {
     @FXML
     void cadastraPortoMetodo(ActionEvent event) {
         EspacoPorto espacoPorto = new EspacoPorto(numeroEP, nomeEP, coordXEP, coordYEP, coordZEP);
-        EspacoPortosService.cadastrar(espacoPorto);
+       // EspacoPortosService.cadastrar(espacoPorto);
 
     }
 

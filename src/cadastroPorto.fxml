@@ -71,6 +71,6 @@
       <TextField fx:id="coordXEP" layoutX="504.0" layoutY="333.0" prefHeight="26.0" prefWidth="413.0" />
       <TextField fx:id="coordYEP" layoutX="506.0" layoutY="416.0" prefHeight="26.0" prefWidth="413.0" />
       <TextField fx:id="coordZEP" layoutX="511.0" layoutY="506.0" prefHeight="26.0" prefWidth="413.0" />
-      <Button fx:id="cadastro" layoutX="668.0" layoutY="563.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Button fx:id="cadastroPorto" layoutX="668.0" layoutY="563.0" mnemonicParsing="false" onAction="#cadastraPortoMetodo" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
    </children>
 </AnchorPane>

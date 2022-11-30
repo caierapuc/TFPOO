@@ -47,6 +47,6 @@
          </font>
       </Label>
       <TextField fx:id="tipoT" layoutX="582.0" layoutY="276.0" prefHeight="26.0" prefWidth="295.0" />
-      <Button fx:id="oka2" layoutX="634.0" layoutY="335.0" mnemonicParsing="false" onAction="#ok2" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Ok" />
+      <Button fx:id="oka" layoutX="634.0" layoutY="335.0" mnemonicParsing="false" onAction="#ok2" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Ok" />
    </children>
 </AnchorPane>

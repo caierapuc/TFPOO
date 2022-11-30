@@ -98,47 +98,47 @@ public class MenuController {
 
     @FXML
     void alteraEstado(ActionEvent event) {
-        App.changeScreen("funcionalidade5");
+        App.changeScreen("alteraEstadoT");
     }
 
     @FXML
     void cadastraNave(ActionEvent event) {
-        App.changeScreen("funcionalidade2");
+        App.changeScreen("cadastroNave");
     }
 
     @FXML
     void cadastraPorto(ActionEvent event) {
-        App.changeScreen("funcionalidade1");
+        App.changeScreen("cadastroPorto");
     }
 
     @FXML
     void cadastraTransporte(ActionEvent event) {
-        App.changeScreen("funcionalidade3");
+        App.changeScreen("cadastroTransporte");
     }
 
     @FXML
     void carregarDados(ActionEvent event) {
-        App.changeScreen("funcionalidade9");
+        App.changeScreen("carregarDados");
     }
 
     @FXML
     void carregarInicial(ActionEvent event) {
-        App.changeScreen("funcionalidade6");
+        App.changeScreen("carregaDadosInicial");
     }
 
     @FXML
     void consultaTransporte(ActionEvent event) {
-        App.changeScreen("funcionalidade4");
+        App.changeScreen("consultaTransportes");
     }
 
     @FXML
     void designarTransporte(ActionEvent event) {
-        App.changeScreen("funcionalidade7");
+        App.changeScreen("designarTransportes");
     }
 
     @FXML
     void salvarDados(ActionEvent event) {
-        App.changeScreen("funcionalidade8");
+        App.changeScreen("salvarDados");
     }
 
     @FXML
@@ -169,10 +169,10 @@ public class MenuController {
     void ok(ActionEvent event) {
 
         if(tipoE.getText().toString().equals("1")) {
-            App.changeScreen("funcionalidade21");
+            App.changeScreen("cadastroNave1");
         }
         else if(tipoE.getText().toString().equals("2")) {
-            App.changeScreen("funcionalidade22");
+            App.changeScreen("cadastroNave2");
         }
         else {
             App.changeScreen("layout");
@@ -183,10 +183,10 @@ public class MenuController {
     void ok2(ActionEvent event) {
 
         if(tipoT.getText().toString().equals("1")) {
-            App.changeScreen("funcionalidade31");
+            App.changeScreen("cadastroTransporte1");
         }
         else if(tipoT.getText().toString().equals("2")) {
-            App.changeScreen("funcionalidade32");
+            App.changeScreen("cadastroTransporte2");
         }
         else {
             App.changeScreen("layout");

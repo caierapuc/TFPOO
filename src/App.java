@@ -39,50 +39,50 @@ public class App extends Application {
         Parent mainScene = FXMLLoader.load(getClass().getResource("layout.fxml"));
         root = new Scene(mainScene);
 
-        Parent funcionalidade1 = FXMLLoader.load(getClass().getResource("funcionalidade1.fxml"));
-        cena1 = new Scene(funcionalidade1);
+        Parent cadastroPorto = FXMLLoader.load(getClass().getResource("cadastroPorto.fxml"));
+        cena1 = new Scene(cadastroPorto);
 
-        Parent funcionalidade2 = FXMLLoader.load(getClass().getResource("funcionalidade2.fxml"));
-        cena2 = new Scene(funcionalidade2);
+        Parent cadastroNave = FXMLLoader.load(getClass().getResource("cadastroNave.fxml"));
+        cena2 = new Scene(cadastroNave);
 
-        Parent funcionalidade3 = FXMLLoader.load(getClass().getResource("funcionalidade3.fxml"));
-        cena3 = new Scene(funcionalidade3);
+        Parent cadastroTransporte = FXMLLoader.load(getClass().getResource("cadastroTransporte.fxml"));
+        cena3 = new Scene(cadastroTransporte);
 
-        Parent funcionalidade4 = FXMLLoader.load(getClass().getResource("funcionalidade4.fxml"));
-        cena4 = new Scene(funcionalidade4);
+        Parent consultaTransportes = FXMLLoader.load(getClass().getResource("consultaTransportes.fxml"));
+        cena4 = new Scene(consultaTransportes);
 
-        Parent funcionalidade5 = FXMLLoader.load(getClass().getResource("funcionalidade5.fxml"));
-        cena5 = new Scene(funcionalidade5);
+        Parent alteraEstadoT = FXMLLoader.load(getClass().getResource("alteraEstadoT.fxml"));
+        cena5 = new Scene(alteraEstadoT);
 
-        Parent funcionalidade6 = FXMLLoader.load(getClass().getResource("funcionalidade6.fxml"));
-        cena6 = new Scene(funcionalidade6);
+        Parent carregaDadosInicial = FXMLLoader.load(getClass().getResource("carregaDadosInicial.fxml"));
+        cena6 = new Scene(carregaDadosInicial);
 
-        Parent funcionalidade7 = FXMLLoader.load(getClass().getResource("funcionalidade7.fxml"));
-        cena7 = new Scene(funcionalidade7);
+        Parent designarTransporte = FXMLLoader.load(getClass().getResource("designarTransportes.fxml"));
+        cena7 = new Scene(designarTransporte);
 
-        Parent funcionalidade8 = FXMLLoader.load(getClass().getResource("funcionalidade8.fxml"));
-        cena8 = new Scene(funcionalidade8);
+        Parent salvarDados = FXMLLoader.load(getClass().getResource("salvarDados.fxml"));
+        cena8 = new Scene(salvarDados);
 
-        Parent funcionalidade9 = FXMLLoader.load(getClass().getResource("funcionalidade9.fxml"));
-        cena9 = new Scene(funcionalidade9);
+        Parent carregarDados = FXMLLoader.load(getClass().getResource("carregarDados.fxml"));
+        cena9 = new Scene(carregarDados);
 
-        Parent funcionalidade21 = FXMLLoader.load(getClass().getResource("funcionalidade21.fxml"));
-        cena21 = new Scene(funcionalidade21);
+        Parent cadastroNave1 = FXMLLoader.load(getClass().getResource("cadastroNave1.fxml"));
+        cena21 = new Scene(cadastroNave1);
 
-        Parent funcionalidade22 = FXMLLoader.load(getClass().getResource("funcionalidade22.fxml"));
-        cena22 = new Scene(funcionalidade22);
+        Parent cadastroNave2 = FXMLLoader.load(getClass().getResource("cadastroNave2.fxml"));
+        cena22 = new Scene(cadastroNave2);
 
-        Parent funcionalidade31 = FXMLLoader.load(getClass().getResource("funcionalidade31.fxml"));
-        cena31 = new Scene(funcionalidade31);
+        Parent cadastroTransporte1 = FXMLLoader.load(getClass().getResource("cadastroTransporte1.fxml"));
+        cena31 = new Scene(cadastroTransporte1);
 
-        Parent funcionalidade32 = FXMLLoader.load(getClass().getResource("funcionalidade32.fxml"));
-        cena32 = new Scene(funcionalidade32);
+        Parent cadastroTransporte2 = FXMLLoader.load(getClass().getResource("cadastroTransporte2.fxml"));
+        cena32 = new Scene(cadastroTransporte2);
 
-        Parent funcionalidade51 = FXMLLoader.load(getClass().getResource("funcionalidade51.fxml"));
-        cena51 = new Scene(funcionalidade51);
+        Parent alteraEstadoT2 = FXMLLoader.load(getClass().getResource("alteraEstadoT2.fxml"));
+        cena51 = new Scene(alteraEstadoT2);
 
-        Parent funcionalidade61 = FXMLLoader.load(getClass().getResource("funcionalidade61.fxml"));
-        cena61 = new Scene(funcionalidade61);
+        Parent carregaDadosInicial2 = FXMLLoader.load(getClass().getResource("carregaDadosInicial2.fxml"));
+        cena61 = new Scene(carregaDadosInicial2);
 
         Parent telaErro = FXMLLoader.load(getClass().getResource("erro.fxml"));
         cenaErro = new Scene(telaErro);
@@ -97,49 +97,49 @@ public class App extends Application {
             case "layout":
             stage.setScene(root);
             break;
-            case "funcionalidade1":
+            case "cadastroPorto":
             stage.setScene(cena1);
             break;
-            case "funcionalidade2":
+            case "cadastroNave":
             stage.setScene(cena2);
             break;
-            case "funcionalidade3":
+            case "cadastroTransporte":
             stage.setScene(cena3);
             break;
-            case "funcionalidade4":
+            case "consultaTransportes":
             stage.setScene(cena4);
             break;
-            case "funcionalidade5":
+            case "alteraEstadoT":
             stage.setScene(cena5);
             break;
-            case "funcionalidade6":
+            case "carregaDadosInicial":
             stage.setScene(cena6);
             break;
-            case "funcionalidade7":
+            case "designarTransportes":
             stage.setScene(cena7);
             break;
-            case "funcionalidade8":
+            case "salvarDados":
             stage.setScene(cena8);
             break;
-            case "funcionalidade9":
+            case "carregarDados":
             stage.setScene(cena9);
             break;
-            case "funcionalidade21":
+            case "cadastroNave1":
             stage.setScene(cena21);
             break;
-            case "funcionalidade22":
+            case "cadastroNave2":
             stage.setScene(cena22);
             break;
-            case "funcionalidade31":
+            case "cadastroTransporte1":
             stage.setScene(cena31);
             break;
-            case "funcionalidade32":
+            case "cadastroTransporte2":
             stage.setScene(cena32);
             break;
-            case "funcionalidade51":
+            case "alteraEstadoT2":
             stage.setScene(cena51);
             break;
-            case "funcionalidade61":
+            case "carregaDadosInicial2":
             stage.setScene(cena61);
             break;
             case "erro":

@@ -1,3 +1,4 @@
+package Entities;
 public class TransportePessoas extends Transporte {
 
     private int quantidadePessoas;

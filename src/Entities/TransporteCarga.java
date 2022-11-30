@@ -1,3 +1,4 @@
+package Entities;
 public class TransporteCarga extends Transporte {
 
     private String descricaoMaterial;

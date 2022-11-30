@@ -1,3 +1,4 @@
+package Entities;
 public class EspaconaveFTL extends Espaconave {
 
     private double velocidadeMaximaWarp;

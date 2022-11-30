@@ -1,3 +1,4 @@
+package Entities;
 public class EspaconaveSubluz extends Espaconave {
 
     private double velocidadeMaxima;

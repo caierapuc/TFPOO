@@ -1,4 +1,6 @@
-package Entities;
+package Entities.Transporte;
+
+import Entities.EspacoPorto.EspacoPorto;
 
 public class TransporteCarga extends Transporte {
     private String descricaoMaterial;

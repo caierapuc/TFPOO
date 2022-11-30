@@ -1,4 +1,7 @@
-package Entities;
+package Entities.Espaconaves;
+
+import Entities.EspacoPorto.EspacoPorto;
+
 public class EspaconaveFTL extends Espaconave {
     private double capacidadePC;
 

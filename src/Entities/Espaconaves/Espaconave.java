@@ -1,14 +1,16 @@
-package Entities;
+package Entities.Espaconaves;
+
+import Entities.EspacoPorto.EspacoPorto;
 
 public class Espaconave {
     private String nome;
-    private double valocidade;
+    private double velocidade;
     private EspacoPorto portoAtual = new EspacoPorto(1, "Terra", 0, 0, 0);
 
     public Espaconave(String nome, EspacoPorto espacoPortoAtual, double velocidade) {
         this.nome = nome;
         this.portoAtual = espacoPortoAtual;
-        this.valocidade = velocidade;
+        this.velocidade = velocidade;
     }
 
     public String getNome() {
@@ -20,6 +22,6 @@ public class Espaconave {
     }
 
     public double getValocidade() {
-        return valocidade;
+        return velocidade;
     }
 }

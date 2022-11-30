@@ -1,4 +1,6 @@
-package Entities;
+package Entities.Transporte;
+
+import Entities.EspacoPorto.EspacoPorto;
 
 public class TransportePessoas extends Transporte {
     private int quantidadePessoas;

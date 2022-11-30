@@ -1,5 +1,6 @@
-package Entities;
+package Entities.Transporte;
 
+import Entities.EspacoPorto.EspacoPorto;
 import Enums.StatusTransporte;
 
 public abstract class Transporte {

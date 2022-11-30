@@ -1,5 +1,6 @@
-package Entities;
+package Entities.Espaconaves;
 
+import Entities.EspacoPorto.EspacoPorto;
 import Enums.Combustiveis;
 
 public class EspaconaveSubluz extends Espaconave {

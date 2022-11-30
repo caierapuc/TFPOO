@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class App extends Application {
     private static Stage stage;
     private static Scene root;
@@ -45,6 +46,18 @@ public class App extends Application {
 
         Parent funcionalidade5 = FXMLLoader.load(getClass().getResource("funcionalidade5.fxml"));
         cena5 = new Scene(funcionalidade5);
+
+        Parent funcionalidade6 = FXMLLoader.load(getClass().getResource("funcionalidade6.fxml"));
+        cena6 = new Scene(funcionalidade6);
+
+        Parent funcionalidade7 = FXMLLoader.load(getClass().getResource("funcionalidade7.fxml"));
+        cena7 = new Scene(funcionalidade7);
+
+        Parent funcionalidade8 = FXMLLoader.load(getClass().getResource("funcionalidade8.fxml"));
+        cena8 = new Scene(funcionalidade8);
+
+        Parent funcionalidade9 = FXMLLoader.load(getClass().getResource("funcionalidade9.fxml"));
+        cena9 = new Scene(funcionalidade9);
 
         primaryStage.setTitle("ACMESpace");
         primaryStage.setScene(root);

@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class MenuController {
 
@@ -33,6 +34,25 @@ public class MenuController {
 
     @FXML
     private Button salvaDados;
+
+    @FXML
+    private Button cadastro;
+
+    @FXML
+    private TextField numeroEP;
+
+    @FXML
+    private TextField coordXEP;
+
+    @FXML
+    private TextField coordYEP;
+
+    @FXML
+    private TextField coordZEP;
+
+    @FXML
+    private TextField nomeEP;
+
 
     @FXML
     void alteraEstado(ActionEvent event) {
@@ -78,6 +98,11 @@ public class MenuController {
     @FXML
     void salvarDados(ActionEvent event) {
         App.changeScreen("funcionalidade8");
+    }
+
+    @FXML
+    void cadastra(ActionEvent event) {
+
     }
 
     @FXML

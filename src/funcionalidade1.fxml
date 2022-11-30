@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -27,18 +28,49 @@
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
-            <Font name="Consolas" size="18.0" />
+            <Font name="Consolas" size="24.0" />
          </font>
       </Button>
       <Pane layoutX="92.0" layoutY="488.0" prefHeight="18.0" prefWidth="268.0" style="-fx-background-color: #000000;" />
       <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
       <Pane layoutX="14.0" layoutY="470.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #000000;" />
       <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
-      <Line endX="132.39996337890625" layoutX="710.0" layoutY="90.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="196.00006103515625" endY="0.1999969482421875" layoutX="728.0" layoutY="99.0" startX="-223.5999755859375" stroke="WHITE" />
       <Label layoutX="120.0" layoutY="580.0" text="Feito por: Caio Fernandes e Paola Lopes" textFill="WHITE">
          <font>
             <Font name="SimSun" size="12.0" />
          </font>
       </Label>
+      <Label layoutX="611.0" layoutY="122.0" prefHeight="54.0" prefWidth="268.0" text="Número do Espaço Porto:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="648.0" layoutY="292.0" prefHeight="54.0" prefWidth="194.0" text="Coordenadas X:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="208.0" prefHeight="54.0" prefWidth="222.0" text="Nome do Espaço Porto:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="648.0" layoutY="375.0" prefHeight="54.0" prefWidth="194.0" text="Coordenadas Y:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="647.0" layoutY="465.0" prefHeight="54.0" prefWidth="194.0" text="Coordenadas Z:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numeroEP" layoutX="506.0" layoutY="164.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="nomeEP" layoutX="504.0" layoutY="249.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordXEP" layoutX="504.0" layoutY="333.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordYEP" layoutX="506.0" layoutY="416.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordZEP" layoutX="511.0" layoutY="506.0" prefHeight="26.0" prefWidth="413.0" />
+      <Button fx:id="cadastro" layoutX="668.0" layoutY="563.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
    </children>
 </AnchorPane>

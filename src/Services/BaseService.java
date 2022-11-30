@@ -1,14 +1,14 @@
-package Controllers;
+package Services;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public abstract class BaseController<T, E> {
+public abstract class BaseService<T, E> {
     private final T repository;
 
-    public BaseController(T repository) {
+    public BaseService(T repository) {
         this.repository = repository;
     }
     

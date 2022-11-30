@@ -1,4 +1,4 @@
-package Controllers;
+package Services;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -13,10 +13,10 @@ import Enums.TipoEspaconave;
 import Repositories.EspaconavesRepository;
 import Repositories.EspacoPortosRepository;
 
-public class EspaconavesController extends BaseController<EspaconavesRepository, Espaconave> {
+public class EspaconavesService extends BaseService<EspaconavesRepository, Espaconave> {
     private final EspacoPortosRepository espacoPortosRepository;
 
-    public EspaconavesController(EspaconavesRepository _espaconavesRepository, EspacoPortosRepository _espacoPortosRepository) {
+    public EspaconavesService(EspaconavesRepository _espaconavesRepository, EspacoPortosRepository _espacoPortosRepository) {
         super(_espaconavesRepository);
         this.espacoPortosRepository = _espacoPortosRepository;
     }

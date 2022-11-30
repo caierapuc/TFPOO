@@ -1,4 +1,4 @@
-package Controllers;
+package Services;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -9,9 +9,9 @@ import java.util.Scanner;
 import Entities.EspacoPorto.EspacoPorto;
 import Repositories.EspacoPortosRepository;
 
-public class EspacoPortosController extends BaseController<EspacoPortosRepository, EspacoPorto> {
+public class EspacoPortosService extends BaseService<EspacoPortosRepository, EspacoPorto> {
 
-    public EspacoPortosController(EspacoPortosRepository _espacoPortosRepository) {
+    public EspacoPortosService(EspacoPortosRepository _espacoPortosRepository) {
         super(_espacoPortosRepository);
     }
 

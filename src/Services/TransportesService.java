@@ -1,4 +1,4 @@
-package Controllers;
+package Services;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -14,11 +14,11 @@ import Enums.TipoTransporte;
 import Repositories.EspacoPortosRepository;
 import Repositories.TransportesRepository;
 
-public class TransportesController extends BaseController<TransportesRepository, Transporte> {
+public class TransportesService extends BaseService<TransportesRepository, Transporte> {
     private final EspacoPortosRepository espacoPortosRepository;
     private Queue<Transporte> transportesPendentes = new LinkedList<Transporte>();
 
-    public TransportesController(TransportesRepository _transportesRepository, EspacoPortosRepository _espacoPortosRepository) {
+    public TransportesService(TransportesRepository _transportesRepository, EspacoPortosRepository _espacoPortosRepository) {
         super(_transportesRepository);
         this.espacoPortosRepository = _espacoPortosRepository;
     }

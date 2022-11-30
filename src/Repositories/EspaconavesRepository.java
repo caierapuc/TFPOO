@@ -7,7 +7,8 @@ import Entities.Espaconave;
 public class EspaconavesRepository {
     private ArrayList<Espaconave> espaconaves = new ArrayList<Espaconave>();
     
-    public void addEspaconave() {
+    public boolean addEspaconave(Espaconave espaconave) {
+        return this.espaconaves.add(espaconave);
     }
     
 }

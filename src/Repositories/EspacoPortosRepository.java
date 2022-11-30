@@ -1,13 +1,16 @@
 package Repositories;
 
-import java.util.ArrayList;
+import java.security.InvalidParameterException;
+import java.util.stream.Collectors;
+
 import Entities.EspacoPorto;
 
-public class EspacoPortosRepository {
-    private ArrayList<EspacoPorto> espacoPortos = new ArrayList<EspacoPorto>();
+public class EspacoPortosRepository extends Repository<EspacoPorto> {
+    @Override
+    public EspacoPorto get(Object numero) {
+        if (!(numero instanceof Integer))
+            throw new InvalidParameterException();
 
-    public boolean addEspacoPorto(EspacoPorto espacoPorto) {
-        return this.espacoPortos.add(espacoPorto);
-    }
-    
+        return this.getList().stream().filter(x -> x.getNumero() == (Integer)numero).collect(Collectors.toList()).get(0);
+    }  
 }

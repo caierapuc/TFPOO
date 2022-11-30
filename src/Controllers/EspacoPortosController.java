@@ -27,7 +27,7 @@ public class EspacoPortosController {
                 while (fr.hasNextLine()){
                     String[] temp = fr.nextLine().split(";");
                     if (count != 0)
-                        espacoPortosRepository.addEspacoPorto(new EspacoPorto(Integer.parseInt(temp[0]), temp[1], Double.parseDouble(temp[2]), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
+                        espacoPortosRepository.add(new EspacoPorto(Integer.parseInt(temp[0]), temp[1], Double.parseDouble(temp[2]), Double.parseDouble(temp[3]), Double.parseDouble(temp[4])));
                     else
                     count++;
                 }

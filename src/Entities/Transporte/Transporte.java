@@ -21,7 +21,14 @@ public abstract class Transporte {
         this.destino = destino;
     }
 
-    public abstract double calculaDistancia();
+    public double calculaDistancia() {
+        var pontoOrigem = (Math.sqrt(Math.pow(origem.getCoordX(), 2) + Math.pow(origem.getCoordY(), 2) + Math.pow(origem.getCoordZ(), 2)));
+        var pontoDestino = (Math.sqrt(Math.pow(destino.getCoordX(), 2) + Math.pow(destino.getCoordY(), 2) + Math.pow(destino.getCoordZ(), 2)));
+
+        var distancia = pontoDestino - pontoOrigem;
+
+        return distancia < 0 ? (distancia * -1) : distancia;
+    }
 
     public abstract double calculaCusto();
 

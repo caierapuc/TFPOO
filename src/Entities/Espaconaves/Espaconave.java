@@ -1,5 +1,6 @@
 package Entities.Espaconaves;
 
+import java.util.ArrayList;
 import Entities.EspacoPorto.EspacoPorto;
 import Entities.Transporte.Transporte;
 import Enums.TipoEspaconave;
@@ -11,6 +12,7 @@ public class Espaconave {
     private EspacoPorto portoAtual;
     private boolean busy = false;
     
+    private ArrayList<Transporte> historico = new ArrayList<Transporte>();
     private Transporte transporteAtual = null;
 
     public Espaconave(TipoEspaconave tipo, String nome, EspacoPorto espacoPortoAtual, double velocidade) {
@@ -18,6 +20,14 @@ public class Espaconave {
         this.nome = nome;
         this.portoAtual = espacoPortoAtual;
         this.velocidade = velocidade;
+    }
+
+    public ArrayList<Transporte> getHistorico() {
+        return new ArrayList<Transporte>(historico);
+    }
+
+    public boolean addHistorico(Transporte obj) {
+        return this.historico.add(obj);
     }
 
     public Transporte getTransporteAtual() {

@@ -29,6 +29,9 @@ public class EspaconavesService extends BaseService<EspaconavesRepository, Espac
         if (obj.getPortoAtual() == null)
             obj.setPortoAtual(espacoPortosRepository.get(11));
 
+        if (obj.getTipo() == TipoEspaconave.SUBLUZ && obj.getValocidade() > 0.3)
+            return false;
+
         return getRepository().add(obj);
     }
 

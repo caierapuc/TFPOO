@@ -32,7 +32,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="cadastroPorto" layoutX="514.0" layoutY="44.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Nova Espaçonave" textFill="WHITE">
+      <Button fx:id="cadastroPorto" layoutX="487.0" layoutY="53.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="44.0" prefWidth="454.0" style="-fx-background-color: #000000;" text="Cadastrar Nova Espaçonave FTL" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -41,12 +41,30 @@
          </font>
       </Button>
       <Line endX="196.00006103515625" endY="0.1999969482421875" layoutX="728.0" layoutY="96.0" startX="-223.5999755859375" stroke="WHITE" />
-      <Label layoutX="582.0" layoutY="215.0" prefHeight="54.0" prefWidth="403.0" text="Tipo da Espaçonave (1 ou 2):" textFill="WHITE">
+      <Button fx:id="cadastro" layoutX="671.0" layoutY="500.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Label layoutX="647.0" layoutY="315.0" prefHeight="54.0" prefWidth="194.0" text="Velocidade:" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tipoE" layoutX="698.0" layoutY="269.0" prefHeight="26.0" prefWidth="58.0" />
-      <Button fx:id="oka" layoutX="643.0" layoutY="315.0" mnemonicParsing="false" onAction="#ok" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Ok" />
+      <Label layoutX="621.0" layoutY="171.0" prefHeight="54.0" prefWidth="222.0" text="Nome da Espaçonave:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="645.0" layoutY="239.0" prefHeight="54.0" prefWidth="194.0" text="Espaçoporto:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeEP" layoutX="506.0" layoutY="212.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordXEP" layoutX="503.0" layoutY="356.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordYEP" layoutX="503.0" layoutY="280.0" prefHeight="26.0" prefWidth="413.0" />
+      <Label layoutX="650.0" layoutY="394.0" prefHeight="54.0" prefWidth="194.0" text="Capacidade:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coordYEP1" layoutX="506.0" layoutY="435.0" prefHeight="26.0" prefWidth="413.0" />
    </children>
 </AnchorPane>

@@ -53,6 +53,12 @@ public class MenuController {
     @FXML
     private TextField nomeEP;
 
+    @FXML
+    private Button oka;
+
+    @FXML
+    private TextField tipoE;
+
 
     @FXML
     void alteraEstado(ActionEvent event) {
@@ -68,7 +74,6 @@ public class MenuController {
     void cadastraPorto(ActionEvent event) {
         App.changeScreen("funcionalidade1");
     }
-
 
     @FXML
     void cadastraTransporte(ActionEvent event) {
@@ -103,6 +108,20 @@ public class MenuController {
     @FXML
     void cadastra(ActionEvent event) {
 
+    }
+
+    @FXML
+    void ok(ActionEvent event) {
+
+        if(tipoE.getText().toString().equals("1")) {
+            App.changeScreen("funcionalidade21");
+        }
+        else if(tipoE.getText().toString().equals("2")) {
+            App.changeScreen("funcionalidade22");
+        }
+        else {
+            App.changeScreen("layout");
+        }
     }
 
     @FXML

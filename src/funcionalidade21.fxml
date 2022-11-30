@@ -32,7 +32,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="cadastroPorto" layoutX="514.0" layoutY="44.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Nova Espaçonave" textFill="WHITE">
+      <Button fx:id="cadastroPorto" layoutX="488.0" layoutY="51.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="44.0" prefWidth="462.0" style="-fx-background-color: #000000;" text="Cadastrar Nova Espaçonave Subluz" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -41,12 +41,30 @@
          </font>
       </Button>
       <Line endX="196.00006103515625" endY="0.1999969482421875" layoutX="728.0" layoutY="96.0" startX="-223.5999755859375" stroke="WHITE" />
-      <Label layoutX="582.0" layoutY="215.0" prefHeight="54.0" prefWidth="403.0" text="Tipo da Espaçonave (1 ou 2):" textFill="WHITE">
+      <Label layoutX="659.0" layoutY="335.0" prefHeight="54.0" prefWidth="194.0" text="Velocidade:" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="tipoE" layoutX="698.0" layoutY="269.0" prefHeight="26.0" prefWidth="58.0" />
-      <Button fx:id="oka" layoutX="643.0" layoutY="315.0" mnemonicParsing="false" onAction="#ok" prefHeight="18.0" prefWidth="168.0" style="-fx-background-color: #FFFF;" text="Ok" />
+      <Label layoutX="617.0" layoutY="158.0" prefHeight="54.0" prefWidth="222.0" text="Nome da Espaçonave:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="249.0" prefHeight="54.0" prefWidth="194.0" text="Espaçoporto:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomeEP" layoutX="502.0" layoutY="199.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordXEP" layoutX="502.0" layoutY="377.0" prefHeight="26.0" prefWidth="413.0" />
+      <TextField fx:id="coordYEP" layoutX="502.0" layoutY="290.0" prefHeight="26.0" prefWidth="413.0" />
+      <Button fx:id="cadastro" layoutX="672.0" layoutY="514.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFFF;" text="Cadastrar" />
+      <Label layoutX="659.0" layoutY="414.0" prefHeight="54.0" prefWidth="194.0" text="Combustível:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coordXEP1" layoutX="507.0" layoutY="456.0" prefHeight="26.0" prefWidth="413.0" />
    </children>
 </AnchorPane>

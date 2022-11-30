@@ -12,13 +12,6 @@ public class TransportePessoas extends Transporte {
     }
     
     @Override
-    public double calculaDistancia() {
-        return 0;
-        // double distancia = 
-        
-    }
-    
-    @Override
     public double calculaCusto() {
         return 0;
     }

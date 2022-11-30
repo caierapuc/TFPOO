@@ -1,16 +1,15 @@
-package Drivers.EspaconavesTests;
+package Entities.Espaconaves;
 
 import Entities.EspacoPorto.*;
 import Entities.Transporte.*;
 import Enums.Combustiveis;
 import Enums.TipoEspaconave;
-import Entities.Espaconaves.*;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 
-public class EspaconaveDriver {
+public class EspaconaveTest {
     @Test
     public void testAddHistorico() {
         var transporte1 = new TransportePessoas(1, new EspacoPorto(1, "Teste", 0, 0, 0), new EspacoPorto(2, "Teste2", 1, 1, 1), 400);

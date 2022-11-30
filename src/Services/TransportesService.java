@@ -85,4 +85,8 @@ public class TransportesService extends BaseService<TransportesRepository, Trans
     public ArrayList<Transporte> getAllEntities() {
         return this.getRepository().getEntities();
     }
+
+    public Transporte get(int identificador){
+        return this.get(identificador);
+    }
 }

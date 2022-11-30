@@ -36,6 +36,7 @@ public class Espaconave {
 
     public void setTransporteAtual(Transporte transporteAtual) {
         this.transporteAtual = transporteAtual;
+        this.busy = true;
     }
 
     public boolean isBusy() {

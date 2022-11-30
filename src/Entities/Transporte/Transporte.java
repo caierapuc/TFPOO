@@ -41,6 +41,7 @@ public abstract class Transporte {
     }
 
     public void setEspaconaveResponsavel(Espaconave espaconaveResponsavel) {
+        setEstado(StatusTransporte.TRANSPORTANDO);
         this.espaconaveResponsavel = espaconaveResponsavel;
     }
 

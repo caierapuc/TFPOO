@@ -22,11 +22,6 @@ public class TransporteCarga extends Transporte {
     }
 
     @Override
-    public double calculaDistancia() {
-        return 0;
-    }
-
-    @Override
     public double calculaCusto() {
         return 0;
     }

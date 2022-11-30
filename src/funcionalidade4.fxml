@@ -21,24 +21,24 @@
       <Line endX="-100.0" endY="-100.25" layoutX="587.0" layoutY="614.0" startX="-100.0" startY="-1.0" stroke="WHITE" />
       <Pane layoutX="14.0" layoutY="470.0" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #000000;" />
       <Pane layoutX="902.0" layoutY="470.0" prefHeight="26.0" prefWidth="23.0" style="-fx-background-color: #000000;" />
-      <Line endX="132.39996337890625" layoutX="704.0" layoutY="153.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="132.39996337890625" layoutX="711.0" layoutY="266.0" startX="-100.0" stroke="WHITE" />
       <Label layoutX="120.0" layoutY="580.0" text="Feito por: Caio Fernandes e Paola Lopes" textFill="WHITE">
          <font>
             <Font name="SimSun" size="12.0" />
          </font>
       </Label>
-      <Button fx:id="cadastroNave" layoutX="524.0" layoutY="102.0" mnemonicParsing="false" onAction="#cadastraNave" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Nova Espaçonave" textFill="WHITE">
+      <Button fx:id="volta" layoutX="906.0" layoutY="7.0" mnemonicParsing="false" onAction="#voltar" opacity="0.13" prefHeight="26.0" prefWidth="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="consultaTransporte" layoutX="522.0" layoutY="285.0" mnemonicParsing="false" onAction="#consultaTransporte" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Consultar Todos os Transportes" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="Consolas" size="18.0" />
          </font>
-      </Button>
-      <Button fx:id="volta" layoutX="906.0" layoutY="7.0" mnemonicParsing="false" onAction="#voltar" opacity="0.13" prefHeight="26.0" prefWidth="14.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
       </Button>
    </children>
 </AnchorPane>

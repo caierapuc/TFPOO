@@ -17,6 +17,11 @@
             <Image url="@Views/Img/ACMESPACE.png" />
          </image>
       </ImageView>
+      <Button fx:id="volta" layoutX="906.0" layoutY="1.0" mnemonicParsing="false" onAction="#voltar" opacity="0.13" prefHeight="26.0" prefWidth="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Button fx:id="cadastroPorto" layoutX="514.0" layoutY="47.0" mnemonicParsing="false" onAction="#cadastraPorto" prefHeight="43.0" prefWidth="392.0" style="-fx-background-color: #000000;" text="Cadastrar Novo Espaço-Porto" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />

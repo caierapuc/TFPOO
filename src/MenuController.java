@@ -5,6 +5,9 @@ import javafx.scene.control.Button;
 public class MenuController {
 
     @FXML
+    private Button volta;
+
+    @FXML
     private Button alteraEstadoT;
 
     @FXML
@@ -75,6 +78,11 @@ public class MenuController {
     @FXML
     void salvarDados(ActionEvent event) {
         App.changeScreen("funcionalidade8");
+    }
+
+    @FXML
+    void voltar(ActionEvent event) {
+        App.changeScreen("layout");
     }
 
 }

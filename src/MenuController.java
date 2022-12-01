@@ -17,6 +17,8 @@ public class MenuController {
     TransportesService transporte;
     BaseService baseService;
 
+    // BUTTONS
+
     @FXML
     private Button volta;
 
@@ -63,6 +65,27 @@ public class MenuController {
     private Button cadastroPorto;
 
     @FXML
+    private Button oka;
+
+    @FXML
+    private Button oka2;
+
+    @FXML
+    private Button alteraEstadoBotao;
+
+    @FXML
+    private Button alteraEstadoB;
+
+    @FXML
+    private Button salvaBotao;
+
+    @FXML
+    private Button carregaBotao;
+
+
+    // TEXTFIELDS
+
+    @FXML
     private TextField numeroEP;
 
     @FXML
@@ -78,34 +101,16 @@ public class MenuController {
     private TextField nomeEP;
 
     @FXML
-    private Button oka;
-
-    @FXML
-    private Button oka2;
-
-    @FXML
     private TextField tipoE;
 
     @FXML
     private TextField tipoT;
 
     @FXML
-    private Button alteraEstadoBotao;
-
-    @FXML
-    private Button alteraEstadoB;
-
-    @FXML
     private TextField identificaTransporte;
 
     @FXML
     private TextField nomeArquivo;
-
-    @FXML
-    private Button salvaBotao;
-
-    @FXML
-    private Button carregaBotao;
 
     @FXML
     private TextField combustivelNave;

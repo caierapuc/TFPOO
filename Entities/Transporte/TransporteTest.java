@@ -115,7 +115,6 @@ public class TransporteTest {
         assertEquals(espaconave, transporte.getEspaconaveResponsavel());
     }
 
-    //TODO
     @Test
     public void testSetEstado() {
         var origem = new EspacoPorto(1, "Teste", 0, 0, 123);
@@ -130,5 +129,12 @@ public class TransporteTest {
 
         assertEquals(StatusTransporte.TRANSPORTANDO, transporte.getEstado());
 
+        transporte.setEstado(StatusTransporte.CANCELADO);
+
+        assertEquals(StatusTransporte.CANCELADO, transporte.getEstado());
+
+        transporte.setEstado(StatusTransporte.FINALIZADO);
+
+        assertEquals(StatusTransporte.FINALIZADO, transporte.getEstado());
     }
 }

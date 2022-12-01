@@ -223,7 +223,9 @@ public class MenuController {
 
     @FXML
     void cadastraSubluz(ActionEvent event) {
-        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave, nomeEspacoporto, velocidadeNaveS, combustivelNave);
+        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave.getText(), nomeEspacoporto, velocidadeNaveS, combustivelNave);
+
+        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave.getText(), null, Double.valueOf(velocidadeNaveS.getText()), combustivelNave.getText());
         espaconaves.cadastrar(espaconave);
     }
 

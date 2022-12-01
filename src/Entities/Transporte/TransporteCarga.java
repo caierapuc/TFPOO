@@ -23,7 +23,10 @@ public class TransporteCarga extends Transporte {
 
     @Override
     public double calculaCusto() {
-        return 0;
+        var custoDistancia = this.calculaDistancia() < 0.5 ? 1000000 : 100;
+        var custoTransportado = carga * 500;
+
+        return custoDistancia * custoTransportado;
     }
     
 }

@@ -2,10 +2,16 @@ import Services.*;
 import Entities.Transporte.*;
 import Enums.Combustiveis;
 import Enums.TipoEspaconave;
+import Enums.TipoTransporte;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
 import Entities.EspacoPorto.EspacoPorto;
 import Entities.Espaconaves.Espaconave;
 import Entities.Espaconaves.EspaconaveFTL;
@@ -22,6 +28,7 @@ public class MenuController {
     BaseService baseService;
 
     public MenuController() {
+
         EspacoPortosRepository espacoPortosRepository = new EspacoPortosRepository();
         eps = new EspacoPortosService(espacoPortosRepository);
 
@@ -97,6 +104,57 @@ public class MenuController {
 
     @FXML
     private Button carregaBotao;
+
+    // DADOS PARA CONSULTA
+
+    @FXML
+    private TableColumn<?, ?> Carga;
+
+    @FXML
+    private TableColumn<?, ?> DestinoT;
+
+    @FXML
+    private TableColumn<?, ?> PortoNave;
+
+    @FXML
+    private TableColumn<?, ?> capacidade;
+
+    @FXML
+    private TableColumn<?, ?> combustivel;
+
+    @FXML
+    private TableColumn<?, ?> custo;
+
+    @FXML
+    private TableColumn<?, ?> descricao;
+
+    @FXML
+    private TableColumn<?, ?> distancia;
+
+    @FXML
+    private TableColumn<?, ?> espaconave;
+
+    @FXML
+    private TableColumn<TransportesRepository, ?> identificadorT;
+
+    @FXML
+    private TableColumn<?, ?> nomeNave;
+
+    @FXML
+    private TableColumn<?, ?> origemT;
+
+    @FXML
+    private TableView<?> tabelaConsulta;
+
+    @FXML
+    private TableColumn<?, ?> tipoN;
+
+    @FXML
+    private TableColumn<TipoTransporte, Enum> tipoTransporte;
+
+    @FXML
+    private TableColumn<?, ?> velocidadeNave;
+
 
     // TEXTFIELDS
 
@@ -230,15 +288,15 @@ public class MenuController {
     }
 
     @FXML
-    void cadastraPortoMetodo(ActionEvent event) {
+    void cadastraPortoMetodo(ActionEvent event) {        
         String nome = nomeEP.getText();
         int numero = Integer.parseInt(numeroEP.getText());
         double coordX = Double.parseDouble(coordXEP.getText());
         double coordY = Double.parseDouble(coordYEP.getText());
         double coordZ = Double.parseDouble(coordZEP.getText());
-
         EspacoPorto espacoPorto = new EspacoPorto(numero, nome, coordX, coordY, coordZ);
         eps.cadastrar(espacoPorto);
+
     }
 
     @FXML
@@ -372,17 +430,18 @@ public class MenuController {
 
     @FXML
     void carregarArquivos(ActionEvent event) {
-
+        String caminho = nomeArquivoD.getText();
+        baseService.loadData(caminho, false);
     }
 
     @FXML
     void salvaArquivo(ActionEvent event) {
-      //  baseService.saveToFile(nomeArquivoS);
-    }
-
-    @FXML
-    void carregaDados(ActionEvent event) {
-   //     baseService.loadData(nomeArquivoD, false);
+        String caminho = nomeArquivoS.getText();
+        try {
+            baseService.saveToFile(caminho);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

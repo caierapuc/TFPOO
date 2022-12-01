@@ -36,4 +36,8 @@ public class EspacoPorto {
         return coordZ;
     }
     
+    public String geraResumo() {
+        String resumo = getNumero() + ";" + getNome() + ";" + getCoordX() + ";" + getCoordY() + ";" + getCoordZ() + "\n";
+        return resumo;
+    }
 }

@@ -17,7 +17,7 @@ public abstract class BaseService<T, E> {
             File file = new File(path);
             
             if (!file.exists())
-            throw new FileNotFoundException("Arquivo não encontrado!");
+                throw new FileNotFoundException("Arquivo não encontrado!");
             
             return readFile(file, initial);
         }

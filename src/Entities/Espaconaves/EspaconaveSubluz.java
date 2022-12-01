@@ -3,7 +3,6 @@ package Entities.Espaconaves;
 import Entities.EspacoPorto.EspacoPorto;
 import Enums.Combustiveis;
 import Enums.TipoEspaconave;
-import javafx.scene.control.TextField;
 
 public class EspaconaveSubluz extends Espaconave {
     private Combustiveis combustivel;
@@ -11,10 +10,6 @@ public class EspaconaveSubluz extends Espaconave {
         public EspaconaveSubluz(String nome, EspacoPorto espacoPortoAtual, double velocidade, Combustiveis combustivel) {
             super(TipoEspaconave.SUBLUZ, nome, espacoPortoAtual, velocidade);
             this.combustivel = combustivel;
-        }
-
-    public EspaconaveSubluz(TextField nomeEspaconave, TextField nomeEspacoporto, TextField velocidadeNaveS,
-                TextField combustivelNave) {
         }
 
     public Combustiveis getCombustivel() {

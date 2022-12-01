@@ -1,5 +1,7 @@
 import Services.*;
 import Entities.Transporte.*;
+import Enums.Combustiveis;
+import Enums.TipoEspaconave;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,13 +11,27 @@ import Entities.Espaconaves.Espaconave;
 import Entities.Espaconaves.EspaconaveFTL;
 import Entities.Espaconaves.EspaconaveSubluz;
 import Repositories.EspacoPortosRepository;
+import Repositories.EspaconavesRepository;
+import Repositories.TransportesRepository;
 
 public class MenuController {
 
     EspacoPortosService eps;
-    EspaconavesService espaconaves;
-    TransportesService transporte;
+    EspaconavesService espaconavesService;
+    TransportesService transportesService;
     BaseService baseService;
+
+    public MenuController() {
+        EspacoPortosRepository espacoPortosRepository = new EspacoPortosRepository();
+        eps = new EspacoPortosService(espacoPortosRepository);
+
+        EspaconavesRepository espaconavesRepository = new EspaconavesRepository();
+        espaconavesService = new EspaconavesService(espaconavesRepository, espacoPortosRepository);
+
+        TransportesRepository transportesRepository = new TransportesRepository();
+        transportesService = new TransportesService(transportesRepository, espacoPortosRepository);
+
+    }
 
     // BUTTONS
 
@@ -81,7 +97,6 @@ public class MenuController {
 
     @FXML
     private Button carregaBotao;
-
 
     // TEXTFIELDS
 
@@ -169,7 +184,6 @@ public class MenuController {
     @FXML
     private TextField nomeArquivoS;
 
-
     @FXML
     void alteraEstado(ActionEvent event) {
         App.changeScreen("alteraEstadoT");
@@ -217,46 +231,107 @@ public class MenuController {
 
     @FXML
     void cadastraPortoMetodo(ActionEvent event) {
-        EspacoPorto espacoPorto = new EspacoPorto(numeroEP, nomeEP, coordXEP, coordYEP, coordZEP);
+        String nome = nomeEP.getText();
+        int numero = Integer.parseInt(numeroEP.getText());
+        double coordX = Double.parseDouble(coordXEP.getText());
+        double coordY = Double.parseDouble(coordYEP.getText());
+        double coordZ = Double.parseDouble(coordZEP.getText());
+
+        EspacoPorto espacoPorto = new EspacoPorto(numero, nome, coordX, coordY, coordZ);
         eps.cadastrar(espacoPorto);
     }
 
     @FXML
     void cadastraSubluz(ActionEvent event) {
-        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave.getText(), nomeEspacoporto, velocidadeNaveS, combustivelNave);
+        String nome = nomeEspaconave.getText();
+        double velocidade = Double.parseDouble(velocidadeNaveS.getText());
+        String nomePorto = nomeEspacoporto.getText();
+        EspacoPorto portoAtual = null;
+        for (EspacoPorto porto : eps.getAllEntities()) {
+            if (nomePorto.equals(porto.getNome())) {
+                portoAtual = porto;
+                break;
+            }
+        }
+        Combustiveis combustivel = Combustiveis.valueOf(combustivelNave.getText());
 
-        Espaconave espaconave = new EspaconaveSubluz(nomeEspaconave.getText(), null, Double.valueOf(velocidadeNaveS.getText()), combustivelNave.getText());
-        espaconaves.cadastrar(espaconave);
+        Espaconave espaconave = new EspaconaveSubluz(nome, portoAtual, velocidade, combustivel);
+        espaconavesService.cadastrar(espaconave);
     }
 
     @FXML
     void cadastraFTL(ActionEvent event) {
-        Espaconave espaconave = new EspaconaveFTL(nomeFTL, espacoPortoFTL, velocidadeNaveF, capacidadeNave);
+        String nome = nomeEspaconave.getText();
+        String nomePorto = nomeEspacoporto.getText();
+        EspacoPorto portoAtual = null;
+        for (EspacoPorto porto : eps.getAllEntities()) {
+            if (nomePorto.equals(porto.getNome())) {
+                portoAtual = porto;
+                break;
+            }
+        }
+        double velocidade = Double.parseDouble(velocidadeNaveF.getText());
+        double capacidadePC = Double.parseDouble(capacidadeNave.getText());
 
+        Espaconave espaconave = new EspaconaveFTL(nome, portoAtual, velocidade, capacidadePC);
+        espaconavesService.cadastrar(espaconave);
     }
 
     @FXML
     void cadastraPessoa(ActionEvent event) {
-        Transporte transporteP = new TransportePessoas(identificadorTransporteP, origemTransporteP, destinoTransporteP, qntdPessoas);
-        transporte.cadastrar(transporteP);
+        int identificador = Integer.parseInt(identificadorTransporteP.getText());
+        EspacoPorto origem = null;
+        for(EspacoPorto porto : eps.getAllEntities()) {
+            if(origem == porto) {
+                origem = porto;
+                break;
+            }
+        }
+        EspacoPorto destino = null;
+        for(EspacoPorto porto : eps.getAllEntities()) {
+            if(destino == porto) {
+                destino = porto;
+                break;
+            }
+        }
+        int quantidadePessoas = Integer.parseInt(capacidadeNave.getText());
+
+        Transporte transporte = new TransportePessoas(identificador, origem, destino, quantidadePessoas);
+        transportesService.cadastrar(transporte);
     }
 
     @FXML
     void cadastraCarga(ActionEvent event) {
-        Transporte transporteC = new TransporteCarga(identificadorTransporteC, origemTransporteC, destinoTransporteC, qntdCarga , descricaoMaterial);
-        transporte.cadastrar(transporteC);
+        int identificador = Integer.parseInt(identificadorTransporteC.getText());
+        EspacoPorto origem = null;
+        for(EspacoPorto porto : eps.getAllEntities()) {
+            if(origem == porto) {
+                origem = porto;
+                break;
+            }
+        }
+        EspacoPorto destino = null;
+        for(EspacoPorto porto : eps.getAllEntities()) {
+            if(destino == porto) {
+                destino = porto;
+                break;
+            }
+        }
+        int quantidadeCarga = Integer.parseInt(capacidadeNave.getText());
+        String descricao = descricaoMaterial.getText();
+
+        Transporte transporte = new TransporteCarga(identificador, origem, destino, quantidadeCarga, descricao);
+        transportesService.cadastrar(transporte);
     }
 
     @FXML
     void ok(ActionEvent event) {
 
-        if(tipoE.getText().toString().equals("1")) {
+        if (tipoE.getText().toString().equals("1")) {
             App.changeScreen("cadastroNave1");
-        }
-        else if(tipoE.getText().toString().equals("2")) {
+        } else if (tipoE.getText().toString().equals("2")) {
             App.changeScreen("cadastroNave2");
-        }
-        else {
+        } else {
             App.changeScreen("layout");
         }
     }
@@ -264,13 +339,11 @@ public class MenuController {
     @FXML
     void ok2(ActionEvent event) {
 
-        if(tipoT.getText().toString().equals("1")) {
+        if (tipoT.getText().toString().equals("1")) {
             App.changeScreen("cadastroTransporte1");
-        }
-        else if(tipoT.getText().toString().equals("2")) {
+        } else if (tipoT.getText().toString().equals("2")) {
             App.changeScreen("cadastroTransporte2");
-        }
-        else {
+        } else {
             App.changeScreen("layout");
         }
     }
@@ -282,9 +355,8 @@ public class MenuController {
 
     @FXML
     void identificarTransporte(ActionEvent event) {
-        
-       
-     // if(identificaTransporte.getText().toString().equals(transporte.getIdentificador()));
+
+        // if(identificaTransporte.getText().toString().equals(transporte.getIdentificador()));
 
     }
 
@@ -305,12 +377,12 @@ public class MenuController {
 
     @FXML
     void salvaArquivo(ActionEvent event) {
-        baseService.saveToFile(nomeArquivoS);
+      //  baseService.saveToFile(nomeArquivoS);
     }
 
     @FXML
     void carregaDados(ActionEvent event) {
-        baseService.loadData(nomeArquivoD, false);
+   //     baseService.loadData(nomeArquivoD, false);
     }
 
     @FXML
@@ -319,4 +391,3 @@ public class MenuController {
     }
 
 }
-

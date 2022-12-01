@@ -13,7 +13,10 @@ public class TransportePessoas extends Transporte {
     
     @Override
     public double calculaCusto() {
-        return 0;
+        var custoDistancia = this.calculaDistancia() < 0.5 ? 1000000 : 100;
+        var custoTransportado = quantidadePessoas * 500;
+
+        return custoDistancia * custoTransportado;
     }
     
     public int getQuantidadePessoas() {

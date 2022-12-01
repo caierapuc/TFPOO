@@ -304,7 +304,6 @@ public class MenuController {
     @FXML
     void salvaArquivo(ActionEvent event) {
         baseService.saveToFile(nomeArquivoS);
-
     }
 
     @FXML
